@@ -12,19 +12,30 @@ title: 糖芷企划
     </audio>
     
 <script>
-        <!--自动尝试播放（带静音处理）-->
+        <!-- 页面加载后尝试静音播放 -->
         window.onload = function() {
             const player = document.getElementById('music-player');
-            player.muted = true; <!--静音状态允许自动播放-->
             
-            player.play()
-                .then(() => {
-                    player.style.display = 'block';
-                    player.muted = false; <!--取消静音-->
-                    document.querySelector('.play-tip').style.display = 'none';
-                })
-                .catch(error => {
-                    console.log('静音自动播放失败:', error);
+            <!-- 设置静音状态 -->
+            player.muted = true;
+            
+            player.play().catch(() => {
+                <!-- 静音播放失败时不提示 -->
+            });
+        }
+
+        <!-- 用户交互处理函数 -->
+        function handlePlay() {
+            const player = document.getElementById('music-player');
+            
+            <!-- 解除静音并隐藏按钮 -->
+            if(player.muted) {
+                player.muted = false;
+                document.getElementById('play-btn').style.display = 'none';
+            } else {
+                player.play().catch(() => {
+                    alert('播放被阻止，请检查浏览器设置');
                 });
+            }
         }
     </script>
