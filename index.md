@@ -8,4 +8,4 @@ title: 糖芷的blog
 
 
 <audio id="background-music" src="Audio/ShuiMu.mp3" autoplay loop>
-    </audio></p><!-- 播放音乐 -->
+    </audio><!-- 播放音乐 -->
