@@ -11,7 +11,7 @@ description: 这是我的 GitHub Pages 网站
 
 # 友情链接
 友情链接:
-- name: Google
-  url: https://www.google.com
-- name: Baidu
-  url: https://www.baidu.com
+  - name: Google
+    url: https://www.google.com
+  - name: Baidu
+    url: https://www.baidu.com
