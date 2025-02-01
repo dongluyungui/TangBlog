@@ -10,8 +10,8 @@ description: 这是我的 GitHub Pages 网站
     style: "float: left; margin-right: 20px; width: 200px;"
 
 # 友情链接
-友情链接:
-  - name: Google
-    url: https://www.google.com
-  - name: Baidu
-    url: https://www.baidu.com
+friends:
+  [
+    { title: "BiLiBiLi", href: "http://www.bilibili.com/" },
+    { title: "KFC", href: "https://www.kfc.com.cn/" },
+  ]
