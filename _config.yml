@@ -1,13 +1,8 @@
 theme: minima
 title: 糖芷的Blog
 author: Tang
-description: 这是我的 GitHub Pages 网站
+description: Hello
 
-# 插入图片配置
-图片配置:
-  logo:
-    src: https://ts1.cn.mm.bing.net/th?id=OADD2.8246449524678_1NFHOA2K20OCQA8NVE&pid=21.2&c=17&roil=0&roit=0.0041&roir=0.9992&roib=0.8886&w=300&h=157&dynsize=1&qlt=90
-    style: "float: left; margin-right: 20px; width: 200px;"
 
 # 友情链接
 friends:
