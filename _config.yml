@@ -2,3 +2,14 @@ theme: minima
 title: 糖芷的Blog
 author: Tang
 description: 这是我的 GitHub Pages 网站
+//插入图片
+图片配置:
+  logo:
+    src: https://example.com/logo.png
+    style: "float: left; margin-right: 20px; width: 200px;"
+//友情链接
+友情链接:
+  - 名称: Google
+    网址: https://www.google.com
+  - 名称: Baidu
+    网址: https://www.baidu.com
