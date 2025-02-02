@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- 进度条 -->
+  <img id="progressBar" src="https://placehold.co/600x20/FFE5EC/FF9EB5?text=35%25" style="width: 600px; height: 20px;">
+  
+  <!-- 显示百分比 -->
+  <p>当前进度：<span id="percentage">35</span>%</p>
+  
+  <!-- 按钮 -->
+  <button onclick="increaseProgress()">点击拯救 +1%</button>
+
+  <script>
+    let currentProgress = 35;
+
+    function increaseProgress() {
+      if (currentProgress < 100) {
+        currentProgress += 1;
+        const progressBar = document.getElementById('progressBar');
+        const percentageSpan = document.getElementById('percentage');
+        
+        // 更新进度条图片（随机参数避免缓存）
+        progressBar.src = `https://placehold.co/600x20/FFE5EC/FF9EB5?text=${currentProgress}%25&r=${Math.random()}`;
+        
+        // 更新百分比显示
+        percentageSpan.textContent = currentProgress;
+      }
+    }
+  </script>
+</body>
+</html>
