@@ -54,24 +54,43 @@
             text-decoration: none;
             margin: 10px 5px;
         }
+
+          .floating-text { 
+            position: absolute; 
+            color: white; 
+            font-size: 16px; 
+            animation: float 1s ease-in-out; 
+        } 
+ 
+        @keyframes float { 
+            0% { 
+                opacity: 1; 
+                transform: translateY(0); 
+            } 
+            100% { 
+                opacity: 0; 
+                transform: translateY(-20px); 
+            } 
+        } 
+
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🍬 糖芷校园拯救计划</h1>
-<div align="center">
+
+        <div class="card">
+            <h2>🌟 虚拟主播糖芷</h2>
+            <p><span class="highlight">「正在与废校倒计时赛跑的虚拟学生会会长！」</span></p>
+            <div align="center">
   <img src="img/TangZhiAll.png" alt="糖芷概念图">
   <p class="image-caption">图1：糖芷概念图</p>
 </div>
-
 <div align="center">
     <audio id="music-player" controls loop>
         <source src="Audio/ShuiMu.mp3" type="audio/mpeg">
     </audio>
 </div>
-        <div class="card">
-            <h2>🌟 虚拟主播糖芷</h2>
-            <p><span class="highlight">「正在与废校倒计时赛跑的虚拟学生会会长！」</span></p>
             <ul>
                 <li>身份：二中第37任学生会会长兼数据载体</li>
                 <li>特征：流动糖浆发梢 / 校徽纹路水手服 / 倒计时全息日历</li>
@@ -79,14 +98,74 @@
             </ul>
         </div>
 
-        <div class="card">
-            <h2>⏳ 当前拯救进度</h2>
-            <div class="progress-bar">
-                <div class="progress"></div>
-            </div>
-            <p>樱花树复活率：37% | 旧校舍修复：15% | 社团激活：2/13</p>
-            <p>距离废校决议还剩：<span class="highlight">89天</span></p>
-        </div>
+    <div class="card"> 
+        <h2>⏳ 当前拯救进度</h2> 
+        <div align="center"> 
+            <img id="progressBar" src="https://placehold.co/600x20/FFE5EC/FF9EB5?text=35%25"  style="width: 650px; height: 40px;"> 
+        </div> 
+ 
+        <!-- 双按钮容器 --> 
+        <div style="display: flex; gap: 20px; margin-top: 15px;"> 
+            <button 
+                onclick="decreaseProgress()" 
+                style="background-color: #ff7f7f; color: white; flex: 1;"> 
+                点击摧毁校舍 
+            </button> 
+            <button 
+                onclick="increaseProgress()" 
+                style="background-color: #7fff7f; color: #333; flex: 1;"> 
+                点击拯救糖芷 
+            </button> 
+        </div> 
+ 
+        <script> 
+            let currentProgress = 35; 
+ 
+            function updateProgress() { 
+                const progressBar = document.getElementById('progressBar');  
+                progressBar.src  = `https://placehold.co/600x20/FFE5EC/FF9EB5?text=${currentProgress}%25&r=${Math.random()}`;  
+            } 
+ 
+            function increaseProgress() { 
+                if (currentProgress < 100) { 
+                    currentProgress += 1; 
+                    updateProgress(); 
+                    // 创建并显示 +1 特效文字 
+                    const floatingText = document.createElement('div');  
+                    floatingText.classList.add('floating-text');  
+                    floatingText.textContent  = '+1'; 
+                    floatingText.style.color  = 'green'; 
+                    floatingText.style.left  = event.pageX  + 'px'; 
+                    floatingText.style.top  = event.pageY  + 'px'; 
+                    document.body.appendChild(floatingText);  
+                    setTimeout(() => { 
+                        floatingText.remove();  
+                    }, 1000); 
+                } 
+            } 
+ 
+            function decreaseProgress() { 
+                if (currentProgress > 0) { 
+                    currentProgress -= 1; 
+                    updateProgress(); 
+                    // 创建并显示 -1 特效文字 
+                    const floatingText = document.createElement('div');  
+                    floatingText.classList.add('floating-text');  
+                    floatingText.textContent  = '-1'; 
+                    floatingText.style.color  ='red'; 
+                    floatingText.style.left  = event.pageX  + 'px'; 
+                    floatingText.style.top  = event.pageY  + 'px'; 
+                    document.body.appendChild(floatingText);  
+                    setTimeout(() => { 
+                        floatingText.remove();  
+                    }, 1000); 
+                } 
+            } 
+        </script> 
+ 
+        <p>樱花树复活率：37% | 旧校舍修复：15% | 社团激活：2/13</p> 
+        <p>距离废校决议还剩：<span class="highlight">89天</span></p> 
+    </div> 
 
         <div class="card">
             <h2>🎥 本周直播预告</h2>
@@ -95,7 +174,7 @@
                 <li>周五 19:30 ▸ 消失的啦啦队舞特训</li>
                 <li>周六 23:00 ▸ 午夜校史馆探险（限定）</li>
             </ul>
-            <a href="#" class="button">订阅直播提醒</a>
+            <a href="_includes/LiveHistory.html" class="button">往期直播记录</a>
         </div>
 
         <div class="card">
@@ -105,7 +184,7 @@
                 <li>带话题 <span class="highlight">#糖芷守护者</span> 分享母校回忆</li>
                 <li>参与官网小游戏补充修复材料</li>
             </ul>
-            <a href="#" class="button">加入守护者联盟</a>
+            <a href="https://qm.qq.com/q/IvStKxWbaE" class="button">加入守护者联盟</a>
             <a href="#" class="button" style="background:#2196F3;">下载AR明信片</a>
         </div>
 
