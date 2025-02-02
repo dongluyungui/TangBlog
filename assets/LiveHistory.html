@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>糖芷企划 - 往期直播记录</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 假设你有一个外部CSS文件 -->
+    <style>
+        /* 合并后的内联CSS样式 */
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            background: #fff5f7;
+            color: #333;
+            margin: 0;
+            padding: 0; /* 使用0 padding，因为导航栏会有自己的padding */
+        }
+        .header {
+            background-color: #e91e63; /* 导航栏背景色 */
+            color: white;
+            padding: 15px 20px; /* 导航栏内边距 */
+            text-align: center; /* 居中对齐 */
+            position: sticky; /* 使导航栏在滚动时保持固定 */
+            top: 0; /* 固定在页面顶部 */
+            z-index: 1000; /* 确保导航栏在其他内容之上 */
+        }
+        .header a, .header button {
+            color: white;
+            text-decoration: none; /* 去除链接下划线 */
+            margin: 0 10px; /* 链接和按钮之间的间距 */
+        }
+        .header button {
+            background-color: #ff9eb5; /* 按钮背景色 */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .header button:hover {
+            background-color: #ff6f91; /* 按钮悬停背景色 */
+        }
+        .container {
+            max-width: 800px;
+            margin: 60px auto 20px; /* 增加顶部外边距以适应固定的导航栏 */
+        }
+        h1 {
+            color: #e91e63;
+            border-bottom: 3px solid #ff9eb5;
+            padding-bottom: 10px;
+        }
+        .live-record {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .live-record img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .live-info {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" onclick="scrollToTop()">Home</a> <!-- 假设scrollToTop()是一个定义的函数，用于滚动到页面顶部 -->
+       <!--  <button onclick="alert('这是一个按钮功能示例')">按钮示例</button>  -->
+        <!-- 可以添加更多链接和按钮 -->
+    </header>
+    <div class="container">
+        <h1>🎥 糖芷企划 - 往期直播记录</h1>
+        
+        <div class="live-record">
+            <img src="img/live1.jpg" alt="直播1封面">
+            <div class="live-info">
+                <h2>直播主题：1963年星空开学典礼复刻</h2>
+                <p><strong>直播日期：</strong>2023年3月15日</p>
+                <p><strong>直播时间：</strong>20:00 - 22:00</p>
+                <p><strong>直播简介：</strong>糖芷带领大家重温了1963年的星空开学典礼，感受了那个时代的独特魅力。</p>
+                <p><strong>视频链接：</strong><a href="https://example.com/live1" target="_blank">点击观看</a></p>
+            </div>
+        </div>
+        
+        <div class="live-record">
+            <img src="img/live2.jpg" alt="直播2封面">
+            <div class="live-info">
+                <h2>直播主题：消失的啦啦队舞特训</h2>
+                <p><strong>直播日期：</strong>2023年3月18日</p>
+                <p><strong>直播时间：</strong>19:30 - 21:00</p>
+                <p><strong>直播简介：</strong>糖芷与啦啦队成员们一起进行了特训，展现了令人惊叹的舞蹈技巧。</p>
+                <p><strong>视频链接：</strong><a href="https://example.com/live2" target="_blank">点击观看</a></p>
+            </div>
+        </div>
+        
+        <!-- 可以继续添加更多直播记录 -->
+        
+    </div>
+
+    <script>
+        // 如果scrollToTop函数未定义，可以在这里定义它
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // 平滑滚动到顶部
+            });
+        }
+    </script>
+</body>
+</html>
